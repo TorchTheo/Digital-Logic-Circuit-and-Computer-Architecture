@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.16.1.2.exe" version="1.0">
+  This file is intended to be loaded by Logisim http://logisim.altervista.org
+
+  <lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="fanout" val="2"/>
+      <a name="incoming" val="8"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="1"/>
+      <a name="bit6" val="1"/>
+      <a name="bit7" val="1"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#TTL" name="2"/>
+  <lib desc="#Plexers" name="3"/>
+  <lib desc="#Arithmetic" name="4"/>
+  <lib desc="#Memory" name="5">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
+  <lib desc="#I/O" name="6"/>
+  <lib desc="#Base" name="7">
+    <tool name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="Dialog plain 12"/>
+      <a name="color" val="#000000"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <main name="main"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="7" map="Button2" name="Poke Tool"/>
+    <tool lib="7" map="Button3" name="Menu Tool"/>
+    <tool lib="7" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="7" name="Poke Tool"/>
+    <tool lib="7" name="Edit Tool"/>
+    <sep/>
+    <tool lib="7" name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="Dialog plain 12"/>
+      <a name="color" val="#000000"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="tristate" val="false"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="main">
+    <a name="circuit" val="main"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="Dialog plain 12"/>
+    <a name="clabelcolor" val="#000000"/>
+  </circuit>
+  <circuit name="RAM-Test">
+    <a name="circuit" val="RAM-Test"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="Dialog plain 12"/>
+    <a name="clabelcolor" val="#000000"/>
+    <wire from="(31710,15640)" to="(31930,15640)"/>
+    <wire from="(31710,15810)" to="(32060,15810)"/>
+    <wire from="(32060,15810)" to="(32220,15810)"/>
+    <wire from="(31710,15710)" to="(31990,15710)"/>
+    <wire from="(31710,15790)" to="(32040,15790)"/>
+    <wire from="(31710,15850)" to="(32100,15850)"/>
+    <wire from="(32210,15660)" to="(32210,15670)"/>
+    <wire from="(31710,15830)" to="(32080,15830)"/>
+    <wire from="(31710,15770)" to="(32020,15770)"/>
+    <wire from="(31930,15690)" to="(31990,15690)"/>
+    <wire from="(32130,15690)" to="(32170,15690)"/>
+    <wire from="(32210,15660)" to="(32250,15660)"/>
+    <wire from="(32100,15850)" to="(32270,15850)"/>
+    <wire from="(32190,15670)" to="(32210,15670)"/>
+    <wire from="(32020,15730)" to="(32020,15770)"/>
+    <wire from="(32080,15730)" to="(32080,15830)"/>
+    <wire from="(32040,15730)" to="(32040,15790)"/>
+    <wire from="(32100,15730)" to="(32100,15850)"/>
+    <wire from="(31930,15640)" to="(31930,15690)"/>
+    <wire from="(32060,15730)" to="(32060,15810)"/>
+    <wire from="(32220,15670)" to="(32220,15810)"/>
+    <wire from="(32270,15680)" to="(32270,15850)"/>
+    <wire from="(32220,15670)" to="(32250,15670)"/>
+    <comp lib="0" loc="(31710,15640)" name="Pin">
+      <a name="width" val="12"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(31710,15710)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="5" loc="(32130,15690)" name="RAM">
+      <a name="addrWidth" val="12"/>
+      <a name="bus" val="separate"/>
+    </comp>
+    <comp lib="6" loc="(31710,15850)" name="Button">
+      <a name="label" val="复位按钮"/>
+      <a name="labelloc" val="west"/>
+    </comp>
+    <comp lib="6" loc="(32250,15670)" name="TTY"/>
+    <comp lib="0" loc="(31710,15830)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="输出使能"/>
+      <a name="labelloc" val="west"/>
+    </comp>
+    <comp lib="0" loc="(32170,15690)" name="Splitter">
+      <a name="fanout" val="2"/>
+      <a name="incoming" val="8"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="1"/>
+    </comp>
+    <comp lib="0" loc="(31710,15810)" name="Clock">
+      <a name="label" val="时钟信号"/>
+    </comp>
+    <comp lib="0" loc="(31710,15770)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="输入使能"/>
+      <a name="labelloc" val="west"/>
+    </comp>
+    <comp lib="0" loc="(31710,15790)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="片选"/>
+      <a name="labelloc" val="west"/>
+    </comp>
+  </circuit>
+</project>
